@@ -1,0 +1,301 @@
+<html><head><base href="path/to/site/" /><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serviços Jurídicos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+:root {
+  --primary-blue: #2b3c6b;
+  --dark-blue: #1a2542;
+}
+
+.top-bar {
+  background: var(--dark-blue);
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+.top-bar i {
+  margin-right: 0.5rem;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.hero-section {
+  background: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.info-card {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.btn-primary {
+  background: var(--primary-blue);
+  border: none;
+  padding: 0.75rem 2rem;
+}
+
+.btn-outline {
+  border: 2px solid #333;
+  padding: 0.75rem 2rem;
+  color: #333;
+}
+
+.carousel-item {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-caption {
+  padding: 2rem;
+  text-align: left;
+  left: 10%;
+  right: auto;
+  max-width: 500px;
+}
+
+.carousel-caption h1,
+.carousel-caption p {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+}
+
+.carousel-caption .btn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+}
+
+.carousel-item.active .carousel-caption h1 {
+  animation: slideUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.carousel-item.active .carousel-caption p {
+  animation: slideUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.carousel-item.active .carousel-caption .btn {
+  animation: slideDown 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.carousel {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.carousel-inner {
+  width: 100%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <nav>
+          <a href="https://example.com/sobre">Sobre</a>
+          <a href="https://example.com/advogados">Advogados</a>
+          <a href="https://example.com/contato">Contato</a>
+          <a href="https://example.com/faq">FAQ</a>
+        </nav>
+      </div>
+      <div class="col-md-6 text-end">
+        <a href="tel:+551199999999"><i class="fas fa-phone"></i>(11) 9999-9999</a>
+        <a href="mailto:contato@advocaciasilva.com.br"><i class="fas fa-envelope"></i>contato@advocaciasilva.com.br</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="https://example.com">
+      <svg width="30" height="30" class="me-2" viewBox="0 0 100 100">
+        <path d="M50 0A50 50 0 1 0 50 100A50 50 0 1 0 50 0" fill="#2b3c6b"/>
+        <path d="M30 30H70V40H30zM30 50H70V60H30zM30 70H70V80H30z" fill="white"/>
+      </svg>
+      Advocacia Silva
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="https://example.com/home">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://example.com/attorneys">Advogados</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://example.com/services">Áreas de Atuação</a></li>
+        <li class="nav-item"><a class="btn btn-primary" href="https://example.com/consultation">Consulta Gratuita</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <svg width="100%" height="600" viewBox="0 0 1200 600">
+        <defs>
+          <pattern id="lawyerPattern1" patternUnits="userSpaceOnUse" width="1200" height="600">
+            <rect width="100%" height="100%" fill="#2b3c6b"/>
+            <path d="M0 300 Q 600 0 1200 300 T 1200 600 L 0 600" fill="#1a2542" opacity="0.7"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#lawyerPattern1)"/>
+      </svg>
+      <div class="carousel-caption">
+        <h1>Excelência em Serviços Jurídicos</h1>
+        <p>Dedicados a proteger seus direitos e garantir seu futuro.</p>
+        <a href="https://example.com/consultation" class="btn btn-primary me-3">Consulta Gratuita</a>
+        <a href="https://example.com/contact" class="btn btn-outline-light">Contate-nos</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg width="100%" height="600" viewBox="0 0 1200 600">
+        <defs>
+          <pattern id="lawyerPattern2" patternUnits="userSpaceOnUse" width="1200" height="600">
+            <rect width="100%" height="100%" fill="#1a2542"/>
+            <circle cx="600" cy="300" r="200" fill="#2b3c6b" opacity="0.7"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#lawyerPattern2)"/>
+      </svg>
+      <div class="carousel-caption">
+        <h1>Advogados Experientes</h1>
+        <p>Mais de 25 anos de casos bem-sucedidos.</p>
+        <a href="https://example.com/about" class="btn btn-primary">Saiba Mais</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg width="100%" height="600" viewBox="0 0 1200 600">
+        <defs>
+          <pattern id="lawyerPattern3" patternUnits="userSpaceOnUse" width="1200" height="600">
+            <rect width="100%" height="100%" fill="#2b3c6b"/>
+            <path d="M0 0 L 1200 0 L 1200 600 L 0 400" fill="#1a2542" opacity="0.7"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#lawyerPattern3)"/>
+      </svg>
+      <div class="carousel-caption">
+        <h1>Especialistas em Direito Civil</h1>
+        <p>Lutamos pela compensação que você merece.</p>
+        <a href="https://example.com/practice-areas" class="btn btn-primary">Nossas Áreas de Atuação</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="container mt-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="info-card">
+        <h3>Avaliação Gratuita</h3>
+        <p>Obtenha uma avaliação profissional da sua situação jurídica sem custos.</p>
+        <a href="https://example.com/evaluation" class="btn btn-light">Agendar Agora →</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info-card">
+        <h3>Áreas de Atuação</h3>
+        <p>Direito Civil, Direito de Família, Direito Criminal, Direito Empresarial</p>
+        <a href="https://example.com/practice-areas" class="btn btn-light">Saiba Mais →</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="info-card">
+        <h3>Horário de Atendimento</h3>
+        <p>Segunda - Sexta: 9:00 - 18:00<br>
+           Sábado: Com Agendamento<br>
+           Suporte Jurídico 24/7</p>
+        <a href="https://example.com/contact" class="btn btn-light">Entre em Contato →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var carousel = document.getElementById('heroCarousel');
+  
+  carousel.addEventListener('slid.bs.carousel', function() {
+    var activeCaption = document.querySelector('.carousel-item.active .carousel-caption');
+    var elements = activeCaption.children;
+    Array.from(elements).forEach(function(element) {
+      element.style.animation = 'none';
+      element.offsetHeight; // Trigger reflow
+      element.style.animation = null;
+    });
+  });
+});
+</script>
+</body></html>
